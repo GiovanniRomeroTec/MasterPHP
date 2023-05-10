@@ -36,10 +36,37 @@ $frase="         mi contenido    ";
 var_dump(trim($frase));
 
 //Eliminar variables / indices
-
 $year=2020;
+unset($year);
 
+//Comprobar variable vacia
+$texto=trim("     ");
+if(empty($texto)){
+    echo "La variable texto esta vacía";
+}else{
+    echo "La variable tiene contenido";
+}
 
+//Contar caracteres de un string
+echo "<br/>";
+$cadena="12345";
+echo "La cadena tiene ".strlen($cadena)." caracteres";
 
+//Encontrar caracter
+
+$frase="La vida es bella";
+echo "<br/>";
+echo "La posición de vida en la variable frase es ".strpos($frase,"vida");
+
+//Reemplazar contenido de un string
+echo "<br/>";
+$frase=str_replace("vida","moto",$frase);
+echo $frase;
+
+//Mayusculas y minisculas
+
+echo strtolower($frase);
+echo "<br/>";
+echo strtoupper($frase);
 ?>
 
